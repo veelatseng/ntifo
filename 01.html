@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>農訊雜誌</title>
+	<link rel="stylesheet" type="text/css" href="js/animate.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.css">
+	<link rel="stylesheet" href="css/01.css">
+</head>
+<body>
+	<div class="swiper1 swiper-container">
+		<div class="header"></div>
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="content content1 pic1"></div>
+				<div class="content content2 txt1"></div>
+			</div>
+			<div class="swiper-slide">
+				<div class="content content1 pic2"><span><img src="images/01/txt2.png" alt=""></span></div>
+				<div class="content content2 txt2"></div>
+			</div>
+			<div class="swiper-slide">
+				<div class="content content1 pic3"><span><img src="images/01/txt3.png" alt=""></div>
+					<div class="content content2 txt3"></div>
+				</div>
+				<div class="swiper-slide">
+					<div class="content content1 pic4"><span><img src="images/01/txt4.png" alt=""></div>
+						<div class="content content2 txt4"></div>
+					</div>
+					<div class="swiper-slide">
+						<div class="content content1 pic5"><span><img src="images/01/txt5.png" alt=""></div>
+							<div class="content content2 txt5"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="content content1 pic6"></div>
+							<div class="content content2 txt6"></div>
+						</div>
+					</div>
+
+					<div class="swiper-pagination"></div>
+				</div>
+				<!-- JQ -->
+				<script src="js/jquery-3.3.1.min.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.js"></script>
+				<script src="js/wow.min.js"></script>
+				<script>
+					wow = new WOW({
+						animateClass: 'animated',
+						offset: 100,
+						callback: function(box) {
+							console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+						}
+					});
+					wow.init();
+				</script>
+				<script>
+					var swiper = new Swiper('.swiper-container', {
+						direction: 'vertical',
+						pagination: {
+							el: '.swiper-pagination',
+							clickable: true,
+						},
+						parallax: true,
+						on: {
+							slideChange: function() {
+								var index = this.previousIndex;
+
+								$('.swiper-slide:eq('+index+')').addClass('fix');
+
+								setTimeout(function(){
+									$('.swiper-slide').removeClass('fix');
+								}, 2000);
+							},
+						}
+					});
+
+
+				</script>
+			</body>
+			</html>

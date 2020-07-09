@@ -1,0 +1,140 @@
+* {
+	box-sizing: border-box;
+}
+html{
+	scroll-behavior: smooth;
+}
+body {
+	padding: 0;
+	margin: 0;
+}
+.wrap{
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+.wrap:hover{
+}
+.bg{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9;
+}
+.bg img{
+	object-fit: cover;
+	width: 100%;
+	height: auto;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+	transition: all 3s;
+	position: relative;
+	z-index: 9;
+}
+.bg:hover img{
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.bg:before{
+	content: "";
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	display: block;
+	z-index: 10;
+	background: url(../images/03/shadow.png) no-repeat left top;
+	background-size: cover;
+}
+
+.menu{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	background:#fff ;
+}
+.menu1{
+	width: 85px;
+	height: 100vh;
+	display: block;
+	background:#fff url(../images/03/menu.jpg) no-repeat left top;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+}
+.menu1 span{
+	width: 86px;
+	height: 86px;
+	display: block;
+	position: absolute;
+	background:url(../images/03/button.jpg) no-repeat center top;
+	left: 0;
+	top: 350px;
+	display: block;
+	opacity: 0;
+	transition: all 1s;
+	z-index: 11;
+}
+.menu1 span.active{
+	opacity: 1;
+	transition: all 1s;
+}
+.menu2{
+	width: 209px;
+	height: 100vh;
+	display: block;
+	background:#fff url(../images/03/menu_hover.jpg) no-repeat right top;
+	position: absolute;
+	left: -209px;
+	top: 0;
+	transition: all 1s;
+	z-index: 10;
+}
+.menu2.active{
+	left: 85px;
+	transition: all 1s;
+}
+.search{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 169px;
+	height: 85px;
+	display: block;
+	background:url(../images/03/search.jpg) no-repeat right top;
+	z-index: 10;
+}
+.txt1,.txt2,.txt3,.txt4{
+	position: absolute;
+	display: block;
+	z-index: 13;	
+}
+.txt1{
+	width: 244px;height: 470px;
+	left: 226px;
+	top: 147px;
+}
+.txt2{
+	width: 216px;height: 198px;
+	left: 590px;top: 69px;
+}
+.txt3{
+	width: 212px;height: 173px;
+	left: 712px;
+	top: 299px;
+}
+.txt4{
+	width: 213px;height: 189px;
+	left: 530px;top: 449px;
+}
+
+
+
+
+

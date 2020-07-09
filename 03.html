@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>農訊雜誌</title>
+	<link rel="stylesheet" type="text/css" href="js/animate.css">
+	<link rel="stylesheet" href="css/03.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="shadow"></div>
+		<div class="bg"><img src="images/03/bg.jpg" alt=""></div>
+		<div class="menu">
+			<div class="menu1 wow slideInLeft"><span></span></div>
+			<div class="menu2"></div>
+		</div>
+		<div class="search wow fadeIn"></div>
+		<div class="txt1 wow fadeIn" data-wow-delay=".5s"><img src="images/03/txt1.png" alt=""></div>
+		<div class="txt2 wow fadeIn" data-wow-delay="1s"><img src="images/03/txt2.png" alt=""></div>
+		<div class="txt3 wow fadeIn" data-wow-delay="1.5s"><img src="images/03/txt3.png" alt=""></div>
+		<div class="txt4 wow fadeIn" data-wow-delay="2s"><img src="images/03/txt4.png" alt=""></div>
+	</div>	
+	<!-- JQ -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script>
+		wow = new WOW({
+			animateClass: 'animated',
+			offset: 100,
+			callback: function(box) {
+				console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+			}
+		});
+		wow.init();
+	</script>
+	<script>
+		$(function(){
+			$(".menu1 span").click(function(event) {
+				$(".menu2").toggleClass('active');
+				$(this).toggleClass('active');
+			});
+		});
+	</script>
+</body>
+</html>
